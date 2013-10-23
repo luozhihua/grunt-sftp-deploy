@@ -229,10 +229,10 @@ module.exports = function(grunt) {
         keyLocation = getKeyLocation(authVals.keyLocation);
         connection.privateKey = fs.readFileSync(keyLocation);
         if (authVals.passphrase) connection.passphrase = authVals.passphrase;
-        log.ok('Logging in to "'+ connection.host.cyan +'" with key at ' + keyLocation.cyan);
+        log.ok('Logging in to '+ connection.host.cyan +' with key at ' + keyLocation.cyan);
       } else {
         connection.password = authVals.password;
-        log.ok('Logging in to "'+ connection.host.cyan +'" with username ' + authVals.username.cyan);
+        log.ok('Logging in to '+ connection.host.cyan +' with username ' + authVals.username.cyan);
       }
 
     }
